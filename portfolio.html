@@ -2,175 +2,130 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Browse my academic and personal projects.">
-    <title>Portfolio | My Portfolio</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Explore my academic and personal development projects.">
+
+    <title>Portfolio | Roy Muhammad Abdullah</title>
+
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="assets/js/main.js" defer></script>
+
 </head>
 
 <body>
 
 <header>
+
     <nav class="navbar" aria-label="Main navigation">
-        <a href="index.html" class="logo">MyPortfolio</a>
+
+        <a href="index.html" class="logo">
+            MyPortfolio
+        </a>
 
         <ul class="nav-links">
+
             <li><a href="index.html">Home</a></li>
+
             <li><a href="interests.html">Interests</a></li>
-            <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+
+            <li>
+                <a href="portfolio.html" aria-current="page">
+                    Portfolio
+                </a>
+            </li>
+
             <li><a href="contact.html">Contact</a></li>
+
         </ul>
+
     </nav>
+
 </header>
+
 
 <main class="page-container">
 
     <section class="page-heading">
-        <p class="eyebrow">My work</p>
-        <h1>Portfolio</h1>
+
+        <p class="eyebrow">Selected Work</p>
+
+        <h1>My Projects</h1>
 
         <p>
-            A collection of academic exercises,
-            personal projects and practical work
-            demonstrating my technical development.
+            Explore my academic and personal projects.
+            Each project provides an overview of its
+            objectives, technologies and development process.
         </p>
-    </section>
-
-    <section class="project-grid">
-
-        <article class="project-card">
-
-            <div class="project-image">
-                <img
-                    src="assets/images/projects/project-one.svg"
-                    alt="Illustration of a personal portfolio website"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="project-content">
-
-                <p class="project-category">
-                    Web Development
-                </p>
-
-                <h2>Personal Portfolio Website</h2>
-
-                <p>
-                    A responsive personal website developed
-                    using HTML, CSS and JavaScript to showcase
-                    my profile, technical interests and projects.
-                </p>
-
-                <div class="technology-tags">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a
-                    href="project-details.html?project=portfolio"
-                    class="text-link"
-                >
-                    View Project Details
-                </a>
-
-            </div>
-
-        </article>
-
-        <article class="project-card">
-
-            <div class="project-image">
-                <img
-                    src="assets/images/projects/project-two.svg"
-                    alt="Illustration of a database management project"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="project-content">
-
-                <p class="project-category">
-                    Database Development
-                </p>
-
-                <h2>Database Management System</h2>
-
-                <p>
-                    An example project space for documenting
-                    database design, data management and
-                    implementation work.
-                </p>
-
-                <div class="technology-tags">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>SQL</span>
-                </div>
-
-                <a
-                    href="project-details.html?project=database"
-                    class="text-link"
-                >
-                    View Project Details
-                </a>
-
-            </div>
-
-        </article>
-
-        <article class="project-card">
-
-            <div class="project-image">
-                <img
-                    src="assets/images/projects/project-three.svg"
-                    alt="Illustration of a software development project"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="project-content">
-
-                <p class="project-category">
-                    Software Development
-                </p>
-
-                <h2>Software Development Project</h2>
-
-                <p>
-                    A space to document an academic or
-                    personal software development project,
-                    including its objectives and implementation.
-                </p>
-
-                <div class="technology-tags">
-                    <span>Java</span>
-                    <span>Supabase</span>
-                </div>
-
-                <a
-                    href="project-details.html?project=software"
-                    class="text-link"
-                >
-                    View Project Details
-                </a>
-
-            </div>
-
-        </article>
 
     </section>
+
+
+
+    <section
+        id="projectGrid"
+        class="project-grid"
+        aria-label="Portfolio projects"
+    >
+
+        <p>Loading projects...</p>
+
+    </section>
+
+
+
+    <dialog
+        id="projectModal"
+        class="project-modal"
+        aria-labelledby="modalTitle"
+    >
+
+        <div class="modal-header">
+
+            <h2 id="modalTitle">
+                Project Information
+            </h2>
+
+            <button
+                type="button"
+                id="closeModal"
+                class="modal-close"
+                aria-label="Close project information"
+                autofocus
+            >
+                &times;
+            </button>
+
+        </div>
+
+
+        <div
+            id="modalContent"
+            class="modal-content"
+        >
+
+        </div>
+
+    </dialog>
 
 </main>
 
+
 <footer>
-    <p>&copy; 2026 Umair Mirza. All rights reserved.</p>
+
+    <p>
+        &copy; 2026 Umair Mirza.
+        All rights reserved.
+    </p>
+
 </footer>
 
-<script src="assets/js/main.js"></script>
-
 </body>
+
 </html>
