@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 300"
+     role="img"
+     aria-labelledby="title desc">
+
+    <title id="title">DevOps Pipeline</title>
+    <desc id="desc">
+        A simplified software delivery pipeline
+        connecting development, testing and deployment.
+    </desc>
+
+    <rect width="500" height="300" rx="18" fill="#eff6ff"/>
+
+    <g fill="none" stroke="#2563eb"
+       stroke-width="5" stroke-linecap="round">
+
+        <path d="M145 145 H190"/>
+        <path d="M310 145 H355"/>
+
+    </g>
+
+    <g fill="#ffffff" stroke="#2563eb" stroke-width="3">
+
+        <rect x="35" y="95" width="110" height="100" rx="14"/>
+        <rect x="190" y="95" width="120" height="100" rx="14"/>
+        <rect x="355" y="95" width="110" height="100" rx="14"/>
+
+    </g>
+
+    <g fill="#2563eb">
+
+        <rect x="60" y="120" width="60" height="8" rx="4"/>
+        <rect x="60" y="140" width="45" height="8" rx="4"/>
+        <rect x="60" y="160" width="55" height="8" rx="4"/>
+
+        <circle cx="250" cy="140" r="24"/>
+        <path d="M239 140 L247 148 L263 130"
+              stroke="#ffffff"
+              stroke-width="5"
+              fill="none"/>
+
+        <path d="M375 145 L390 160 L440 110"
+              stroke="#2563eb"
+              stroke-width="8"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+
+    </g>
+
+    <g fill="#0f172a" font-size="14"
+       font-family="Arial" text-anchor="middle">
+
+        <text x="90" y="225">Develop</text>
+        <text x="250" y="225">Test</text>
+        <text x="410" y="225">Deploy</text>
+
+    </g>
+
+</svg>
