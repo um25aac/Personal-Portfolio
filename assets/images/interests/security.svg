@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 300"
+     role="img"
+     aria-labelledby="title desc">
+
+    <title id="title">Cybersecurity</title>
+    <desc id="desc">
+        A security shield and check mark representing
+        protected digital infrastructure.
+    </desc>
+
+    <rect width="500" height="300" rx="18" fill="#eff6ff"/>
+
+    <circle cx="250" cy="140" r="100"
+            fill="#dbeafe"/>
+
+    <path d="M250 45
+             L340 80
+             V145
+             C340 205 300 235 250 260
+             C200 235 160 205 160 145
+             V80 Z"
+          fill="#2563eb"/>
+
+    <path d="M250 65
+             L320 92
+             V145
+             C320 190 292 215 250 240
+             C208 215 180 190 180 145
+             V92 Z"
+          fill="#ffffff"/>
+
+    <path d="M215 145
+             L240 170
+             L290 115"
+          fill="none"
+          stroke="#2563eb"
+          stroke-width="13"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+
+    <g fill="#2563eb">
+        <circle cx="105" cy="90" r="7"/>
+        <circle cx="395" cy="90" r="7"/>
+        <circle cx="105" cy="210" r="7"/>
+        <circle cx="395" cy="210" r="7"/>
+    </g>
+
+</svg>
