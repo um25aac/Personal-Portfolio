@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 300"
+     role="img"
+     aria-labelledby="title desc">
+
+    <title id="title">Cloud Computing</title>
+    <desc id="desc">
+        A cloud connected to three infrastructure servers.
+    </desc>
+
+    <rect width="500" height="300" rx="18" fill="#eff6ff"/>
+
+    <g fill="#ffffff" stroke="#2563eb" stroke-width="5">
+
+        <path d="M170 135
+                 C140 135 120 112 120 88
+                 C120 63 140 45 165 45
+                 C180 10 230 10 250 48
+                 C285 35 320 60 320 95
+                 C320 118 300 135 275 135 Z"/>
+
+    </g>
+
+    <g stroke="#2563eb" stroke-width="4" fill="none">
+
+        <path d="M220 135 V170"/>
+        <path d="M120 170 H380"/>
+        <path d="M120 170 V195"/>
+        <path d="M250 170 V195"/>
+        <path d="M380 170 V195"/>
+
+    </g>
+
+    <g fill="#ffffff" stroke="#2563eb" stroke-width="3">
+
+        <rect x="75" y="195" width="90" height="55" rx="8"/>
+        <rect x="205" y="195" width="90" height="55" rx="8"/>
+        <rect x="335" y="195" width="90" height="55" rx="8"/>
+
+    </g>
+
+    <g fill="#2563eb">
+
+        <circle cx="95" cy="212" r="5"/>
+        <circle cx="225" cy="212" r="5"/>
+        <circle cx="355" cy="212" r="5"/>
+
+        <rect x="110" y="210" width="40" height="5" rx="2"/>
+        <rect x="240" y="210" width="40" height="5" rx="2"/>
+        <rect x="370" y="210" width="40" height="5" rx="2"/>
+
+    </g>
+
+    <text x="250" y="90"
+          text-anchor="middle"
+          fill="#2563eb"
+          font-family="Arial"
+          font-size="18"
+          font-weight="bold">CLOUD</text>
+
+</svg>
