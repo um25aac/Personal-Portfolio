@@ -726,3 +726,27 @@ footer {
     }
 
 }
+
+
+
+.profile-information {
+    margin-top: 22px;
+    padding: 18px 20px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+}
+
+.profile-information p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.profile-information p:last-child {
+    margin-bottom: 0;
+}
+
+.profile-information strong {
+    color: var(--dark);
+}
+
