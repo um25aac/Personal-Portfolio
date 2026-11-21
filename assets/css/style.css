@@ -433,6 +433,24 @@ header {
 
 
 
+.technology-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.technology-tags span {
+    background: var(--primary-light);
+    color: var(--primary);
+
+    padding: 5px 11px;
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
 
 .project-details {
     max-width: 850px;
