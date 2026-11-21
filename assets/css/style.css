@@ -675,3 +675,54 @@ footer {
     }
 
 }
+
+
+
+.interest-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+}
+
+.interest-image {
+    background: #eff6ff;
+    padding: 20px;
+}
+
+.interest-image img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+}
+
+.interest-content {
+    padding: 25px;
+}
+
+.interest-content h2 {
+    font-size: 23px;
+    margin: 8px 0 15px;
+}
+
+.interest-content p:not(.project-category) {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.interest-card:hover {
+    border-color: #bfdbfe;
+}
+
+@media (max-width: 768px) {
+
+    .interest-image img {
+        height: 165px;
+    }
+
+    .interest-content {
+        padding: 20px;
+    }
+
+}
