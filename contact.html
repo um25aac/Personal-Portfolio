@@ -1,119 +1,238 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact me about my work, projects and technical interests.">
-    <title>Contact Me | My Portfolio</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Contact Umair Mirza through his personal portfolio.">
+
+    <title>Contact | Umair Mirza</title>
+
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="assets/js/main.js" defer></script>
+
 </head>
 
 <body>
 
 <header>
+
     <nav class="navbar" aria-label="Main navigation">
-        <a href="index.html" class="logo">MyPortfolio</a>
+
+        <a href="index.html" class="logo">
+            MyPortfolio
+        </a>
 
         <ul class="nav-links">
+
             <li><a href="index.html">Home</a></li>
+
             <li><a href="interests.html">Interests</a></li>
+
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html" aria-current="page">Contact</a></li>
+
+            <li>
+                <a href="contact.html" aria-current="page">
+                    Contact
+                </a>
+            </li>
+
         </ul>
+
     </nav>
+
 </header>
+
 
 <main class="page-container">
 
     <section class="page-heading">
-        <p class="eyebrow">Let's connect</p>
+
+        <p class="eyebrow">Get In Touch</p>
+
         <h1>Contact Me</h1>
 
         <p>
-            Have a question or want to discuss a project?
-            You can use the form below to prepare a message.
+            Have a question, suggestion or opportunity?
+            Feel free to use the form below to get in touch.
         </p>
+
     </section>
+
 
     <section class="content-card contact-card">
 
-        <form id="contactForm">
+        <h2>Send a Message</h2>
+
+        <p>
+            All fields marked with an asterisk (*) are required.
+        </p>
+
+
+        <form id="contactForm" novalidate>
+
+
 
             <div class="form-group">
-                <label for="name">Full Name</label>
+
+                <label for="name">
+                    Full Name *
+                </label>
 
                 <input
                     type="text"
                     id="name"
                     name="name"
+                    placeholder="Enter your full name"
                     autocomplete="name"
                     required
                     minlength="2"
-                    placeholder="Enter your full name"
+                    maxlength="60"
+                    aria-describedby="nameError"
                 >
+
+                <small
+                    id="nameError"
+                    class="field-error"
+                ></small>
+
             </div>
 
+
+
+
             <div class="form-group">
-                <label for="email">Email Address</label>
+
+                <label for="email">
+                    Email Address *
+                </label>
 
                 <input
                     type="email"
                     id="email"
                     name="email"
+                    placeholder="example@email.com"
                     autocomplete="email"
                     required
-                    placeholder="Enter your email address"
+                    maxlength="254"
+                    aria-describedby="emailError"
                 >
+
+                <small
+                    id="emailError"
+                    class="field-error"
+                ></small>
+
             </div>
 
+
+
+
             <div class="form-group">
-                <label for="subject">Subject</label>
+
+                <label for="subject">
+                    Subject *
+                </label>
 
                 <input
                     type="text"
                     id="subject"
                     name="subject"
+                    placeholder="Enter message subject"
                     required
-                    placeholder="Enter the subject"
+                    minlength="3"
+                    maxlength="100"
+                    aria-describedby="subjectError"
                 >
+
+                <small
+                    id="subjectError"
+                    class="field-error"
+                ></small>
+
             </div>
 
+
+
             <div class="form-group">
-                <label for="message">Your Message</label>
+
+                <label for="message">
+                    Message *
+                </label>
 
                 <textarea
                     id="message"
                     name="message"
-                    rows="6"
+                    placeholder="Write your message here..."
                     required
                     minlength="10"
-                    placeholder="Write your message here"
+                    maxlength="2000"
+                    rows="6"
+                    aria-describedby="messageError"
                 ></textarea>
+
+                <small
+                    id="messageError"
+                    class="field-error"
+                ></small>
+
             </div>
 
-            <button type="submit" class="btn">
-                Prepare Message
-            </button>
 
-            <p
+
+
+            <div
                 id="formFeedback"
+                class="form-feedback"
                 role="status"
                 aria-live="polite"
-            ></p>
+            ></div>
+
+
+
+            <div class="form-actions">
+
+                <button type="submit" class="btn">
+                    Validate Message
+                </button>
+
+                <button
+                    type="reset"
+                    class="btn btn-outline"
+                >
+                    Clear Form
+                </button>
+
+            </div>
 
         </form>
+
+        <p class="form-disclaimer">
+            This is a client-side demonstration form.
+            Messages are validated in your browser but
+            are not transmitted or delivered.
+        </p>
 
     </section>
 
 </main>
 
+
 <footer>
-    <p>&copy; 2026 Umair Mirza. All rights reserved.</p>
+
+    <p>
+        &copy; 2026 Umair Mirza.
+        All rights reserved.
+    </p>
+
 </footer>
 
-<script src="assets/js/main.js"></script>
-
 </body>
+
 </html>
