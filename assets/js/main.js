@@ -597,3 +597,308 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProjectDetails();
 
 });
+
+
+
+
+function initializeContactForm() {
+
+    const form = document.getElementById("contactForm");
+
+    if (!form) {
+        return;
+    }
+
+    const fields = {
+        name: document.getElementById("name"),
+        email: document.getElementById("email"),
+        subject: document.getElementById("subject"),
+        message: document.getElementById("message")
+    };
+
+    const feedback = document.getElementById("formFeedback");
+
+
+
+
+    function validateName(value) {
+
+        const name = value.trim();
+
+        if (!name) {
+            return "Please enter your full name.";
+        }
+
+        if (name.length < 2) {
+            return "Name must contain at least 2 characters.";
+        }
+
+        if (name.length > 60) {
+            return "Name cannot exceed 60 characters.";
+        }
+
+        return "";
+
+    }
+
+
+    function validateEmail(value) {
+
+        const email = value.trim();
+
+        if (!email) {
+            return "Please enter your email address.";
+        }
+
+        if (email.length > 254) {
+            return "Email address is too long.";
+        }
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            return "Please enter a valid email address.";
+        }
+
+        return "";
+
+    }
+
+
+    function validateSubject(value) {
+
+        const subject = value.trim();
+
+        if (!subject) {
+            return "Please enter a subject.";
+        }
+
+        if (subject.length < 3) {
+            return "Subject must contain at least 3 characters.";
+        }
+
+        if (subject.length > 100) {
+            return "Subject cannot exceed 100 characters.";
+        }
+
+        return "";
+
+    }
+
+
+    function validateMessage(value) {
+
+        const message = value.trim();
+
+        if (!message) {
+            return "Please enter your message.";
+        }
+
+        if (message.length < 10) {
+            return "Message must contain at least 10 characters.";
+        }
+
+        if (message.length > 2000) {
+            return "Message cannot exceed 2000 characters.";
+        }
+
+        return "";
+
+    }
+
+
+
+
+    function showError(field, errorElement, message) {
+
+        errorElement.textContent = message;
+
+        field.setAttribute(
+            "aria-invalid",
+            message ? "true" : "false"
+        );
+
+        field.classList.toggle(
+            "input-error",
+            Boolean(message)
+        );
+
+    }
+
+
+
+
+    function clearError(field, errorElement) {
+
+        showError(field, errorElement, "");
+
+    }
+
+
+
+
+    function validateField(fieldName) {
+
+        const field = fields[fieldName];
+
+        const errorElement = document.getElementById(
+            `${fieldName}Error`
+        );
+
+        let error = "";
+
+        switch (fieldName) {
+
+            case "name":
+                error = validateName(field.value);
+                break;
+
+            case "email":
+                error = validateEmail(field.value);
+                break;
+
+            case "subject":
+                error = validateSubject(field.value);
+                break;
+
+            case "message":
+                error = validateMessage(field.value);
+                break;
+
+        }
+
+        showError(field, errorElement, error);
+
+        return !error;
+
+    }
+
+
+
+
+    Object.keys(fields).forEach(fieldName => {
+
+        const field = fields[fieldName];
+
+        field.addEventListener("blur", () => {
+
+            validateField(fieldName);
+
+        });
+
+        field.addEventListener("input", () => {
+
+            const errorElement = document.getElementById(
+                `${fieldName}Error`
+            );
+
+    
+            if (field.getAttribute("aria-invalid") === "true") {
+
+                clearError(field, errorElement);
+
+            }
+
+            feedback.textContent = "";
+
+            feedback.className = "form-feedback";
+
+        });
+
+    });
+
+
+
+
+    form.addEventListener("submit", event => {
+
+        event.preventDefault();
+
+        feedback.textContent = "";
+
+        feedback.className = "form-feedback";
+
+
+        let isValid = true;
+
+        let firstInvalidField = null;
+
+
+        Object.keys(fields).forEach(fieldName => {
+
+            const valid = validateField(fieldName);
+
+            if (!valid) {
+
+                isValid = false;
+
+                if (!firstInvalidField) {
+                    firstInvalidField = fields[fieldName];
+                }
+
+            }
+
+        });
+
+
+        if (!isValid) {
+
+            feedback.textContent =
+                "Please correct the highlighted fields.";
+
+            feedback.classList.add("error-message");
+
+            firstInvalidField.focus();
+
+            return;
+
+        }
+
+
+
+        feedback.textContent =
+            "Validation successful! Your message is ready, " +
+            "but this demonstration form does not send or deliver messages.";
+
+        feedback.classList.add("success-message");
+
+        console.log("Contact form validation successful.");
+
+    });
+
+
+
+    form.addEventListener("reset", () => {
+
+        setTimeout(() => {
+
+            Object.keys(fields).forEach(fieldName => {
+
+                const field = fields[fieldName];
+
+                const errorElement = document.getElementById(
+                    `${fieldName}Error`
+                );
+
+                clearError(field, errorElement);
+
+            });
+
+            feedback.textContent = "";
+
+            feedback.className = "form-feedback";
+
+        }, 0);
+
+    });
+
+}
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    initializeContactForm();
+
+});
