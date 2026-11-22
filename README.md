@@ -27,12 +27,12 @@ and contact information.
 
 ## Project Structure
 
-- `index.html` — Homepage
-- `about.html` — Personal profile
-- `portfolio.html` — Projects
-- `project-details.html` — Project details
-- `contact.html` — Contact form
-- `assets/` — CSS, JavaScript, and images
+- `index.html`: Homepage
+- `about.html`: Personal profile
+- `portfolio.html`: Projects
+- `project-details.html`: Project details
+- `contact.html`: Contact form
+- `assets/`: CSS, JavaScript, and images
 
 ## How to Run
 
